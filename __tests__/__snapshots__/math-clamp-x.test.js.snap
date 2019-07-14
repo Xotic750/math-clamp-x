@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mathClamp should throw RangeError if min > max 1`] = `"\\"min\\" must be less than \\"max\\""`;
+
+exports[`mathClamp should throw RangeError if min > max 2`] = `"\\"min\\" must be less than \\"max\\""`;
+
+exports[`mathClamp should throw RangeError if min > max 3`] = `"\\"min\\" must be less than \\"max\\""`;
+
+exports[`mathClamp should throw RangeError if min > max 4`] = `"\\"min\\" must be less than \\"max\\""`;

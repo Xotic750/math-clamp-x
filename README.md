@@ -21,15 +21,13 @@
 <a name="module_math-clamp-x"></a>
 
 ## math-clamp-x
+
 Clamp a number to limits.
 
-**Version**: 1.2.0  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
 <a name="exp_module_math-clamp-x--module.exports"></a>
 
 ### `module.exports(value, [min], max)` ⇒ <code>number</code> ⏏
+
 This method clamp a number to min and max limits inclusive.
 
 **Kind**: Exported function  
@@ -38,14 +36,18 @@ This method clamp a number to min and max limits inclusive.
 
 - <code>RangeError</code> If min > max.
 
+| Param | Type                | Default        | Description               |
+| ----- | ------------------- | -------------- | ------------------------- |
+| value | <code>number</code> |                | The number to be clamped. |
+| [min] | <code>number</code> | <code>0</code> | The minimum number.       |
+| max   | <code>number</code> |                | The maximum number.       |
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| value | <code>number</code> |  | The number to be clamped. |
-| [min] | <code>number</code> | <code>0</code> | The minimum number. |
-| max | <code>number</code> |  | The maximum number. |
+**Example**
 
-**Example**  
 ```js
-var mathClamp = require('math-clamp-x');
+import mathClamp from 'math-clamp-x';
+
+console.log(mathClamp(-5, 3, 3)); // 3
+console.log(mathClamp(0, 3, 3)); // 3
+console.log(mathClamp(5, 3, 3)); // 3
 ```
