@@ -1,15 +1,13 @@
 /**
  * @file Clamp a number to limits.
- * @version 1.2.0
- * @author Xotic750 <Xotic750@gmail.com>
- * @copyright  Xotic750
+ * @version 1.2.0.
+ * @author Xotic750 <Xotic750@gmail.com>.
+ * @copyright  Xotic750.
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
- * @module math-clamp-x
+ * @module Math-clamp-x.
  */
 
-'use strict';
-
-var toNumber = require('to-number-x').toNumber2018;
+const toNumber = require('to-number-x').toNumber2018;
 
 /**
  * This method clamp a number to min and max limits inclusive.
@@ -18,19 +16,21 @@ var toNumber = require('to-number-x').toNumber2018;
  * @param {number} [min=0] - The minimum number.
  * @param {number} max - The maximum number.
  * @throws {RangeError} If min > max.
- * @return {number} The clamped number.
+ * @returns {number} The clamped number.
  * @example
- * var mathClamp = require('math-clamp-x');
+ * var mathClamp = require('math-clamp-x');.
  */
 module.exports = function clamp(value) {
-  var number = toNumber(value);
-  var argsLength = arguments.length;
+  const number = toNumber(value);
+  const argsLength = arguments.length;
+
   if (argsLength < 2) {
     return number;
   }
 
-  var min = toNumber(arguments[1]);
-  var max;
+  let min = toNumber(arguments[1]);
+  let max;
+
   if (argsLength < 3) {
     max = min;
     min = 0;
