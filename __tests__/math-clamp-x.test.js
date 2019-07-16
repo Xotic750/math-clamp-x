@@ -9,17 +9,13 @@ describe('mathClamp', function() {
   it('should work Math like with none or a single argument', function() {
     expect.assertions(16);
 
-    /* eslint-disable-next-line no-void,lodash/prefer-noop */
     const values = [void 0, null, 0, '', false, true, 1, '1', [], {}, function() {}, NaN, Infinity];
 
-    /* eslint-disable-next-line compat/compat */
     expect(Number.isNaN(mathClamp())).toBe(true);
     values.forEach(function(value) {
-      /* eslint-disable-next-line compat/compat */
       expect(Object.is(mathClamp(value), Math.max(0, value))).toBe(true, `${value} clamped ${mathClamp(value)}`);
     });
 
-    /* eslint-disable-next-line compat/compat */
     expect(Object.is(mathClamp(-0), -0)).toBe(true);
     expect(mathClamp(-Infinity)).toBe(-Infinity);
   });
@@ -107,7 +103,7 @@ describe('mathClamp', function() {
 
   it('should return `NaN` when `number` is `NaN`', function() {
     expect.assertions(1);
-    /* eslint-disable-next-line compat/compat */
+
     expect(Number.isNaN(mathClamp(NaN, -5, 5))).toBe(true);
   });
 
