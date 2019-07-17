@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-17T16:53:11.080Z",
+  "date": "2019-07-17T17:30:44.871Z",
   "describe": "",
   "description": "Clamp a number to limits.",
   "file": "math-clamp-x.js",
   "hash": "3b04af921cd42096801e",
   "license": "MIT",
-  "version": "3.0.6"
+  "version": "3.0.7"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
