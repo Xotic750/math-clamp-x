@@ -1,4 +1,6 @@
-import toNumber from 'to-number-x';
+import toNumber from 'to-number-x'; // eslint-disable jsdoc/check-param-names
+// noinspection JSCommentMatchesSignature
+
 /**
  * This method clamp a number to min and max limits inclusive.
  *
@@ -8,8 +10,9 @@ import toNumber from 'to-number-x';
  * @throws {RangeError} If min > max.
  * @returns {number} The clamped number.
  */
+// eslint-enable jsdoc/check-param-names
 
-export default function clamp(value) {
+var clamp = function clamp(value) {
   var number = toNumber(value);
   var argsLength = arguments.length;
 
@@ -43,6 +46,8 @@ export default function clamp(value) {
   }
 
   return number;
-}
+};
+
+export default clamp;
 
 //# sourceMappingURL=math-clamp-x.esm.js.map

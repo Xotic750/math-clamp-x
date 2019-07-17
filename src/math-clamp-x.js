@@ -1,5 +1,7 @@
 import toNumber from 'to-number-x';
 
+// eslint-disable jsdoc/check-param-names
+// noinspection JSCommentMatchesSignature
 /**
  * This method clamp a number to min and max limits inclusive.
  *
@@ -9,7 +11,8 @@ import toNumber from 'to-number-x';
  * @throws {RangeError} If min > max.
  * @returns {number} The clamped number.
  */
-export default function clamp(value) {
+// eslint-enable jsdoc/check-param-names
+const clamp = function clamp(value) {
   const number = toNumber(value);
   const argsLength = arguments.length;
 
@@ -42,4 +45,6 @@ export default function clamp(value) {
   }
 
   return number;
-}
+};
+
+export default clamp;
