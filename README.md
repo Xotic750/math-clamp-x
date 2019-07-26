@@ -1,10 +1,12 @@
-<a href="https://travis-ci.org/Xotic750/math-clamp-x"
+<a
+  href="https://travis-ci.org/Xotic750/math-clamp-x"
   title="Travis status">
 <img
   src="https://travis-ci.org/Xotic750/math-clamp-x.svg?branch=master"
   alt="Travis status" height="18">
 </a>
-<a href="https://david-dm.org/Xotic750/math-clamp-x"
+<a
+  href="https://david-dm.org/Xotic750/math-clamp-x"
   title="Dependency status">
 <img src="https://david-dm.org/Xotic750/math-clamp-x/status.svg"
   alt="Dependency status" height="18"/>
@@ -15,15 +17,23 @@
 <img src="https://david-dm.org/Xotic750/math-clamp-x/dev-status.svg"
   alt="devDependency status" height="18"/>
 </a>
-<a href="https://badge.fury.io/js/math-clamp-x"
+<a
+  href="https://badge.fury.io/js/math-clamp-x"
   title="npm version">
 <img src="https://badge.fury.io/js/math-clamp-x.svg"
   alt="npm version" height="18">
 </a>
-<a href="https://www.jsdelivr.com/package/npm/math-clamp-x"
+<a
+  href="https://www.jsdelivr.com/package/npm/math-clamp-x"
   title="jsDelivr hits">
 <img src="https://data.jsdelivr.com/v1/package/npm/math-clamp-x/badge?style=rounded"
   alt="jsDelivr hits" height="18">
+</a>
+<a
+  href="https://bettercodehub.com/results/Xotic750/math-clamp-x"
+  title="bettercodehub score">
+<img src="https://bettercodehub.com/edge/badge/Xotic750/math-clamp-x?branch=master"
+  alt="bettercodehub score" height="18">
 </a>
 
 <a name="module_math-clamp-x"></a>
