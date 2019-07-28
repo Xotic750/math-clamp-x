@@ -1,5 +1,26 @@
 import toNumber from 'to-number-x';
 
+const getMaxMin = function getMaxMin(args) {
+  const minVal = toNumber(args[1]);
+
+  const result =
+    args.length < 3
+      ? {
+          max: minVal,
+          min: 0,
+        }
+      : {
+          max: toNumber(args[2]),
+          min: minVal,
+        };
+
+  if (result.min > result.max) {
+    throw new RangeError('"min" must be less than "max"');
+  }
+
+  return result;
+};
+
 // eslint-disable jsdoc/check-param-names
 // noinspection JSCommentMatchesSignature
 /**
@@ -14,23 +35,13 @@ import toNumber from 'to-number-x';
 // eslint-enable jsdoc/check-param-names
 const clamp = function clamp(value) {
   const number = toNumber(value);
-  const argsLength = arguments.length;
 
-  if (argsLength < 2) {
+  if (arguments.length < 2) {
     return number;
   }
 
   /* eslint-disable-next-line prefer-rest-params */
-  let min = toNumber(arguments[1]);
-  let max;
-
-  if (argsLength < 3) {
-    max = min;
-    min = 0;
-  } else {
-    /* eslint-disable-next-line prefer-rest-params */
-    max = toNumber(arguments[2]);
-  }
+  const {max, min} = getMaxMin(arguments);
 
   if (min > max) {
     throw new RangeError('"min" must be less than "max"');

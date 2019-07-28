@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-27T21:26:41.557Z",
+  "date": "2019-07-28T11:28:29.935Z",
   "describe": "",
   "description": "Clamp a number to limits.",
   "file": "math-clamp-x.js",
-  "hash": "7203f67891c697f918a1",
+  "hash": "082acc6efe06e5de5185",
   "license": "MIT",
   "version": "3.0.22"
 }
@@ -1325,7 +1325,24 @@ var to_number_x_esm_toNumber = function toNumber(argument) {
 
 
 // CONCATENATED MODULE: ./dist/math-clamp-x.esm.js
- // eslint-disable jsdoc/check-param-names
+
+
+var math_clamp_x_esm_getMaxMin = function getMaxMin(args) {
+  var minVal = to_number_x_esm(args[1]);
+  var result = args.length < 3 ? {
+    max: minVal,
+    min: 0
+  } : {
+    max: to_number_x_esm(args[2]),
+    min: minVal
+  };
+
+  if (result.min > result.max) {
+    throw new RangeError('"min" must be less than "max"');
+  }
+
+  return result;
+}; // eslint-disable jsdoc/check-param-names
 // noinspection JSCommentMatchesSignature
 
 /**
@@ -1339,26 +1356,19 @@ var to_number_x_esm_toNumber = function toNumber(argument) {
  */
 // eslint-enable jsdoc/check-param-names
 
+
 var math_clamp_x_esm_clamp = function clamp(value) {
   var number = to_number_x_esm(value);
-  var argsLength = arguments.length;
 
-  if (argsLength < 2) {
+  if (arguments.length < 2) {
     return number;
   }
   /* eslint-disable-next-line prefer-rest-params */
 
 
-  var min = to_number_x_esm(arguments[1]);
-  var max;
-
-  if (argsLength < 3) {
-    max = min;
-    min = 0;
-  } else {
-    /* eslint-disable-next-line prefer-rest-params */
-    max = to_number_x_esm(arguments[2]);
-  }
+  var _getMaxMin = math_clamp_x_esm_getMaxMin(arguments),
+      max = _getMaxMin.max,
+      min = _getMaxMin.min;
 
   if (min > max) {
     throw new RangeError('"min" must be less than "max"');
