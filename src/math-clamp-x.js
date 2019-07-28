@@ -2,17 +2,7 @@ import toNumber from 'to-number-x';
 
 const getMaxMin = function getMaxMin(args) {
   const minVal = toNumber(args[1]);
-
-  const result =
-    args.length < 3
-      ? {
-          max: minVal,
-          min: 0,
-        }
-      : {
-          max: toNumber(args[2]),
-          min: minVal,
-        };
+  const result = args.length < 3 ? {max: minVal, min: 0} : {max: toNumber(args[2]), min: minVal};
 
   if (result.min > result.max) {
     throw new RangeError('"min" must be less than "max"');
@@ -42,10 +32,6 @@ const clamp = function clamp(value) {
 
   /* eslint-disable-next-line prefer-rest-params */
   const {max, min} = getMaxMin(arguments);
-
-  if (min > max) {
-    throw new RangeError('"min" must be less than "max"');
-  }
 
   if (number < min) {
     return min;
