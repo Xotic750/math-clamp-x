@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-28T11:28:29.935Z",
+  "date": "2019-07-29T18:55:22.397Z",
   "describe": "",
   "description": "Clamp a number to limits.",
   "file": "math-clamp-x.js",
-  "hash": "082acc6efe06e5de5185",
+  "hash": "39fe83f2dc5a5f07ab4d",
   "license": "MIT",
   "version": "3.0.22"
 }
@@ -1369,10 +1369,6 @@ var math_clamp_x_esm_clamp = function clamp(value) {
   var _getMaxMin = math_clamp_x_esm_getMaxMin(arguments),
       max = _getMaxMin.max,
       min = _getMaxMin.min;
-
-  if (min > max) {
-    throw new RangeError('"min" must be less than "max"');
-  }
 
   if (number < min) {
     return min;

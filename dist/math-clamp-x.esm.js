@@ -43,10 +43,6 @@ var clamp = function clamp(value) {
       max = _getMaxMin.max,
       min = _getMaxMin.min;
 
-  if (min > max) {
-    throw new RangeError('"min" must be less than "max"');
-  }
-
   if (number < min) {
     return min;
   }
