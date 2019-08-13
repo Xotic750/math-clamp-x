@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-08-13T11:17:40.387Z",
+  "date": "2019-08-13T13:02:38.420Z",
   "describe": "",
   "description": "Clamp a number to limits.",
   "file": "math-clamp-x.js",
